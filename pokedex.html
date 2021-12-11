@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="veiwport" content="width=device-width initial-scale=1.0" />
+        <title>PokeDex</title>
+        <link rel="icon" href="https://i.pinimg.com/originals/09/da/92/09da926c2b94d95008a9e3b2f60bfdd3.png">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body id="mainBody">
+        <main>
+          <div id="page-container">
+          <div class="header">
+            <div class="title">
+              <image src="./PokeballTitle.png" class="" id="meme" style="transform: scaleX(-1)"  alt="pokeball" height=5% width=5%></image>
+              <image src="https://static.wikia.nocookie.net/monster-master/images/9/95/Great_ball_by_peetzaahhh2010-d93nt17.png" style="transform: scaleX(-1)"  alt="greatball" height=5% width=5%></image> 
+              <image src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon" height=10% width=15% ></image>
+              <image src="https://seeklogo.com/images/U/ultraball-pokemon-logo-35E5B2B3B5-seeklogo.com.png" alt="ultraball" height=5% width=5%></image>
+              <image src="https://playerverse.com/wp-content/uploads/2021/03/master_ball_pokemon_sword_and_shield_masterball_1577726001_28ef8f31.png" alt="masterball" height=5% width=5%></image>
+            </div>
+            <div class="filters" id="filters">
+              <h2 style="font-size: 1.5vw;">Generation</h2><h2 style="font-size: 1.5vw;">Type</h2><h2 style="font-size: 1.5vw;">Pokedex Status</h2>
+              <div class="break"></div>
+              <select title="Filter By Generation" class="filter" name="Generation" id="generation">
+                  <option value="All" data-beginning=0 data-end=898>All</option>
+                  <option value="Kanto" data-beginning=0 data-end=151>1 - Kanto</option>
+                  <option value="Johto" data-beginning=151 data-end=251>2 - Johto</option>
+                  <option value="Hoenn" data-beginning=251 data-end=386>3 - Hoenn</option>
+                  <option value="Sinnoh" data-beginning=386 data-end=493>4 - Sinnoh</option>
+                  <option value="Unova" data-beginning=493 data-end=649>5 - Unova</option>
+                  <option value="Kalos" data-beginning=649 data-end=721>6 - Kalos</option>
+                  <option value="Alola" data-beginning=721 data-end=809>7 - Alola</option>
+                  <option value="Galar" data-beginning=809 data-end=898>8 - Galar</option>
+                </select>
+                <select title="Filter By Type" class="filter" name="Type" id="type">
+                  <option value="All" data-type="All">All</option>
+                  <option value="Bug" data-type="Bug">Bug</option>
+                  <option value="Dark" data-type="Dark">Dark</option>
+                  <option value="Dragon" data-type="Dragon">Dragon</option>
+                  <option value="Electric" data-type="Electric">Electric</option>
+                  <option value="Fairy" data-type="Fairy">Fairy</option>
+                  <option value="Fighting" data-type="Fighting">Fighting</option>
+                  <option value="Fire" data-type="Fire">Fire</option>
+                  <option value="Flying" data-type="Flying">Flying</option>
+                  <option value="Ghost" data-type="Ghost">Ghost</option>
+                  <option value="Grass" data-type="Grass">Grass</option>
+                  <option value="Ground" data-type="Ground">Ground</option>
+                  <option value="Ice" data-type="Ice">Ice</option>
+                  <option value="Normal" data-type="Normal">Normal</option>
+                  <option value="Poison" data-type="Poison">Poison</option>
+                  <option value="Psychic" data-type="Psychic">Psychic</option>
+                  <option value="Rock" data-type="Rock">Rock</option>
+                  <option value="Steel" data-type="Steel">Steel</option>
+                  <option value="Water" data-type="Water">Water</option>
+                </select>
+                <select title="Filter By Catch Status" class="filter" name="Caught" id="caught">
+                  <option value="All" data-caught="All">All</option>
+                  <option value="All" data-caught="true">Caught</option>
+                  <option value="All" data-caught="false">Not Caught</option>
+                </select>
+              </div>
+              <a id="pageRef" href="types.html"><div id="page" title="View Damage Chart">Damage <br>Charts<image src='top-10-baffling-pokemon-types.png' style="min-width: 10%; max-width: 30%; align-self: baseline; margin-left: -5%;"></image></div></a>
+              <div class="topnav" id="searchDiv">
+                <input id="searchBar" type="text" placeholder="Search.." style="color:whitesmoke;"><image id="search" src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png'></image>
+              </div>
+            </div>
+            
+            <button title="All Pokemon" class="hide" id="back"></button>
+
+            <ul id="pokemon" class="pokeDex">
+            </ul>
+            <div id="snackbar"><h1 class="loading">Loading...</h1><image class="loading" src="https://gifimage.net/wp-content/uploads/2018/04/pokemon-gif-transparent-1.gif" style="height: 10vw; transform: scaleX(-1);"></image></div>
+           </div>
+            <footer>
+              <p>Pokémon and All Respective Names are Trademark & © of Nintendo 1996-2021 | <a href="./about.html" id="about">About</a> | <a href="./contact.html" id="contact">Contact Us</a></p>
+            </footer>
+      </main>         
+      
+          <script src="main.js" type="module"></script>
+          <script src="https://www.gstatic.com/charts/loader.js"></script>
+    </body>
+
+    
+</html>
